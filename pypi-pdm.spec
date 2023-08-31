@@ -4,10 +4,10 @@
 # Using build pattern: pyproject
 #
 Name     : pypi-pdm
-Version  : 2.8.2
-Release  : 6
-URL      : https://files.pythonhosted.org/packages/e9/10/8d02f73be59e8a310265fab28dec2552882da77321a4f36ad9af3993a5da/pdm-2.8.2.tar.gz
-Source0  : https://files.pythonhosted.org/packages/e9/10/8d02f73be59e8a310265fab28dec2552882da77321a4f36ad9af3993a5da/pdm-2.8.2.tar.gz
+Version  : 2.9.0
+Release  : 7
+URL      : https://files.pythonhosted.org/packages/28/21/9e0dadd64aca30c1f6dea41c58599191b51419aa2227b1445f391ca215f6/pdm-2.9.0.tar.gz
+Source0  : https://files.pythonhosted.org/packages/28/21/9e0dadd64aca30c1f6dea41c58599191b51419aa2227b1445f391ca215f6/pdm-2.9.0.tar.gz
 Summary  : A modern Python package and dependency manager supporting the latest PEP standards
 Group    : Development/Tools
 License  : MIT
@@ -71,6 +71,7 @@ Requires: pypi(resolvelib)
 Requires: pypi(rich)
 Requires: pypi(shellingham)
 Requires: pypi(tomlkit)
+Requires: pypi(truststore)
 Requires: pypi(unearth)
 Requires: pypi(virtualenv)
 
@@ -79,10 +80,10 @@ python3 components for the pypi-pdm package.
 
 
 %prep
-%setup -q -n pdm-2.8.2
-cd %{_builddir}/pdm-2.8.2
+%setup -q -n pdm-2.9.0
+cd %{_builddir}/pdm-2.9.0
 pushd ..
-cp -a pdm-2.8.2 buildavx2
+cp -a pdm-2.9.0 buildavx2
 popd
 
 %build
@@ -90,7 +91,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1690817558
+export SOURCE_DATE_EPOCH=1693495246
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
