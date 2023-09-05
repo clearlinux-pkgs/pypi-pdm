@@ -4,10 +4,10 @@
 # Using build pattern: pyproject
 #
 Name     : pypi-pdm
-Version  : 2.9.0
-Release  : 7
-URL      : https://files.pythonhosted.org/packages/28/21/9e0dadd64aca30c1f6dea41c58599191b51419aa2227b1445f391ca215f6/pdm-2.9.0.tar.gz
-Source0  : https://files.pythonhosted.org/packages/28/21/9e0dadd64aca30c1f6dea41c58599191b51419aa2227b1445f391ca215f6/pdm-2.9.0.tar.gz
+Version  : 2.9.1
+Release  : 8
+URL      : https://files.pythonhosted.org/packages/3c/82/835ca4f6ebb67a0fc220eb865a4dc411afe57e8c9c8a81b34fbf9874ebc4/pdm-2.9.1.tar.gz
+Source0  : https://files.pythonhosted.org/packages/3c/82/835ca4f6ebb67a0fc220eb865a4dc411afe57e8c9c8a81b34fbf9874ebc4/pdm-2.9.1.tar.gz
 Summary  : A modern Python package and dependency manager supporting the latest PEP standards
 Group    : Development/Tools
 License  : MIT
@@ -80,10 +80,10 @@ python3 components for the pypi-pdm package.
 
 
 %prep
-%setup -q -n pdm-2.9.0
-cd %{_builddir}/pdm-2.9.0
+%setup -q -n pdm-2.9.1
+cd %{_builddir}/pdm-2.9.1
 pushd ..
-cp -a pdm-2.9.0 buildavx2
+cp -a pdm-2.9.1 buildavx2
 popd
 
 %build
@@ -91,7 +91,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1693495246
+export SOURCE_DATE_EPOCH=1693932921
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
