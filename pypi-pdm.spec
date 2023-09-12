@@ -4,10 +4,10 @@
 # Using build pattern: pyproject
 #
 Name     : pypi-pdm
-Version  : 2.9.1
-Release  : 8
-URL      : https://files.pythonhosted.org/packages/3c/82/835ca4f6ebb67a0fc220eb865a4dc411afe57e8c9c8a81b34fbf9874ebc4/pdm-2.9.1.tar.gz
-Source0  : https://files.pythonhosted.org/packages/3c/82/835ca4f6ebb67a0fc220eb865a4dc411afe57e8c9c8a81b34fbf9874ebc4/pdm-2.9.1.tar.gz
+Version  : 2.9.2
+Release  : 9
+URL      : https://files.pythonhosted.org/packages/0c/1a/5475da7e816fa32e8a94e4df657d8ccb44643257d1d0c307e8e6d420a583/pdm-2.9.2.tar.gz
+Source0  : https://files.pythonhosted.org/packages/0c/1a/5475da7e816fa32e8a94e4df657d8ccb44643257d1d0c307e8e6d420a583/pdm-2.9.2.tar.gz
 Summary  : A modern Python package and dependency manager supporting the latest PEP standards
 Group    : Development/Tools
 License  : MIT
@@ -17,6 +17,11 @@ Requires: pypi-pdm-python = %{version}-%{release}
 Requires: pypi-pdm-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
 BuildRequires : pypi(pdm_backend)
+BuildRequires : pypi(py)
+BuildRequires : pypi-pluggy
+BuildRequires : pypi-pytest
+BuildRequires : pypi-tox
+BuildRequires : pypi-virtualenv
 # Suppress stripping binaries
 %define __strip /bin/true
 %define debug_package %{nil}
@@ -80,10 +85,10 @@ python3 components for the pypi-pdm package.
 
 
 %prep
-%setup -q -n pdm-2.9.1
-cd %{_builddir}/pdm-2.9.1
+%setup -q -n pdm-2.9.2
+cd %{_builddir}/pdm-2.9.2
 pushd ..
-cp -a pdm-2.9.1 buildavx2
+cp -a pdm-2.9.2 buildavx2
 popd
 
 %build
@@ -91,7 +96,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1693932921
+export SOURCE_DATE_EPOCH=1694532523
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
