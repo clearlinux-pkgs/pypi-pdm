@@ -7,7 +7,7 @@
 #
 Name     : pypi-pdm
 Version  : 2.11.1
-Release  : 15
+Release  : 16
 URL      : https://files.pythonhosted.org/packages/5a/71/e38d1194d10347b38d89541f9ab31f8684a84744b3893710acc08b09beff/pdm-2.11.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/5a/71/e38d1194d10347b38d89541f9ab31f8684a84744b3893710acc08b09beff/pdm-2.11.1.tar.gz
 Summary  : A modern Python package and dependency manager supporting the latest PEP standards
