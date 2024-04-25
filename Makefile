@@ -1,5 +1,5 @@
 PKG_NAME := pypi-pdm
-URL = https://files.pythonhosted.org/packages/14/8e/505d8b7a87c7a67512788add96a93cbf26e549a1b663850beb2d06245026/pdm-2.15.0.tar.gz
+URL = https://files.pythonhosted.org/packages/ff/55/baf970b59fea776bd6e6257c521e36b2d3c3d11a76cd050720a60f50344b/pdm-2.15.1.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
